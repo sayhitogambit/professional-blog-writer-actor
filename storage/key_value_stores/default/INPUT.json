@@ -13,6 +13,5 @@
   "ctaText": "Ready to transform your content marketing with AI? Contact us today for a free consultation and discover how AI can revolutionize your content strategy.",
   "industryContext": "Digital Marketing and Content Creation",
   "writingModel": "anthropic/claude-3.5-sonnet",
-  "imageModel": "black-forest-labs/flux-schnell",
-  "openrouterApiKey": "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"
+  "imageModel": "black-forest-labs/flux-schnell"
 }

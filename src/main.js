@@ -22,15 +22,18 @@ await Actor.main(async () => {
     const input = await Actor.getInput();
     console.log('Input:', JSON.stringify(input, null, 2));
 
+    // Get OpenRouter API key from environment variables
+    const openrouterApiKey = process.env.OPENROUTER_API_KEY;
+    if (!openrouterApiKey) {
+        throw new Error('OPENROUTER_API_KEY environment variable is required. Please configure it in the actor settings.');
+    }
+
     // Validate required inputs
     if (!input?.topic) {
         throw new Error('Topic is required');
     }
     if (!input?.keywords || input.keywords.length === 0) {
         throw new Error('At least one SEO keyword is required');
-    }
-    if (!input?.openrouterApiKey) {
-        throw new Error('OpenRouter API key is required. Get one at https://openrouter.ai/keys');
     }
 
     const {
@@ -48,8 +51,7 @@ await Actor.main(async () => {
         ctaText = null,
         industryContext = null,
         writingModel = 'anthropic/claude-3.5-sonnet',
-        imageModel = 'black-forest-labs/flux-schnell',
-        openrouterApiKey
+        imageModel = 'black-forest-labs/flux-schnell'
     } = input;
 
     console.log('\n========================================');

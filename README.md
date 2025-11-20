@@ -54,11 +54,12 @@ Create comprehensive, SEO-optimized blog articles (2000-5000 words) with AI-gene
 
 ## Input Parameters
 
+**Note**: This actor is configured by the creator with OpenRouter API credentials. Users do not need to provide their own API keys.
+
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `topic` | String | ✅ | Main topic or title for the article |
 | `keywords` | Array | ✅ | SEO keywords (1-10) |
-| `openrouterApiKey` | String | ✅ | Your OpenRouter API key |
 | `targetAudience` | String | ❌ | Target audience (e.g., "marketing professionals") |
 | `wordCount` | Integer | ❌ | Target word count (1000-5000, default: 2000) |
 | `tone` | String | ❌ | Writing tone (default: "professional") |
@@ -105,8 +106,7 @@ The actor returns a comprehensive JSON object with:
   "numberOfImages": 3,
   "industryContext": "Digital Marketing",
   "writingModel": "anthropic/claude-3.5-sonnet",
-  "imageModel": "black-forest-labs/flux-schnell",
-  "openrouterApiKey": "YOUR_API_KEY"
+  "imageModel": "black-forest-labs/flux-schnell"
 }
 ```
 
@@ -136,10 +136,18 @@ Dynamic pricing based on article length and number of images:
 
 ## Getting Started
 
-1. Get your OpenRouter API key from [openrouter.ai/keys](https://openrouter.ai/keys)
-2. Configure the actor with your desired parameters
+### For Users
+1. Simply provide your article topic and keywords
+2. Configure optional parameters (word count, tone, images, etc.)
 3. Run the actor
 4. Receive a professional blog article ready to publish!
+
+### For Actor Creators (Configuration)
+1. Get your OpenRouter API key from [openrouter.ai/keys](https://openrouter.ai/keys)
+2. In Apify Console, go to your actor settings
+3. Add environment variable: `OPENROUTER_API_KEY` = `your-api-key-here`
+4. The actor will use this key for all API calls
+5. Users pay you via Apify, you pay OpenRouter - profit from the margin!
 
 ## Use Cases
 
