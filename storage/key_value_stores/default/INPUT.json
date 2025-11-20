@@ -1,0 +1,18 @@
+{
+  "topic": "The Future of AI in Content Marketing: Trends and Strategies for 2025",
+  "keywords": ["AI content marketing", "content automation", "AI writing tools", "marketing AI", "content strategy"],
+  "targetAudience": "Marketing professionals, content creators, and digital marketers",
+  "wordCount": 2500,
+  "tone": "professional",
+  "includeImages": true,
+  "numberOfImages": 3,
+  "includeTableOfContents": true,
+  "includeExecutiveSummary": true,
+  "includeReferences": true,
+  "includeCallToAction": true,
+  "ctaText": "Ready to transform your content marketing with AI? Contact us today for a free consultation and discover how AI can revolutionize your content strategy.",
+  "industryContext": "Digital Marketing and Content Creation",
+  "writingModel": "anthropic/claude-3.5-sonnet",
+  "imageModel": "black-forest-labs/flux-schnell",
+  "openrouterApiKey": "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"
+}

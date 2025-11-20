@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "name": "professional-blog-writer",
+  "title": "Professional Blog Writer with AI Images",
+  "description": "Create comprehensive, SEO-optimized blog articles (2000-5000 words) with AI-generated images, executive summaries, table of contents, references, and professional HTML formatting. Perfect for content marketing, thought leadership, and SEO.",
+  "version": "1.0.0",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Professional Blog Articles",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "transformation": {
+            "fields": ["title", "wordCount", "executiveSummary", "imageUrls", "cost"]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "title": {"label": "Title", "format": "text"},
+              "wordCount": {"label": "Words", "format": "number"},
+              "executiveSummary": {"label": "Summary", "format": "text"},
+              "imageUrls": {"label": "Images", "format": "array"},
+              "cost": {"label": "Cost ($)", "format": "number"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "readme": "./README.md"
+}

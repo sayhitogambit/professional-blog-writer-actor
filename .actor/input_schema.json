@@ -1,0 +1,131 @@
+{
+  "title": "Professional Blog Writer Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "topic": {
+      "title": "Article Topic",
+      "type": "string",
+      "description": "Main topic or title for the blog article",
+      "editor": "textfield",
+      "minLength": 5
+    },
+    "keywords": {
+      "title": "SEO Keywords",
+      "type": "array",
+      "description": "Target SEO keywords to include in the article",
+      "editor": "stringList",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 10
+    },
+    "targetAudience": {
+      "title": "Target Audience",
+      "type": "string",
+      "description": "Who is this article for? (e.g., 'marketing professionals', 'small business owners')",
+      "editor": "textfield"
+    },
+    "wordCount": {
+      "title": "Target Word Count",
+      "type": "integer",
+      "description": "Desired article length in words",
+      "editor": "number",
+      "minimum": 1000,
+      "maximum": 5000,
+      "default": 2000
+    },
+    "tone": {
+      "title": "Writing Tone",
+      "type": "string",
+      "description": "The tone and style of writing",
+      "editor": "select",
+      "enum": ["professional", "conversational", "technical", "educational", "inspirational"],
+      "default": "professional",
+      "enumTitles": ["Professional", "Conversational", "Technical", "Educational", "Inspirational"]
+    },
+    "includeImages": {
+      "title": "Generate AI Images",
+      "type": "boolean",
+      "description": "Generate relevant images using AI (FLUX/DALL-E)",
+      "editor": "checkbox",
+      "default": true
+    },
+    "numberOfImages": {
+      "title": "Number of Images",
+      "type": "integer",
+      "description": "How many AI images to generate",
+      "editor": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 3
+    },
+    "includeTableOfContents": {
+      "title": "Include Table of Contents",
+      "type": "boolean",
+      "description": "Add a clickable table of contents",
+      "editor": "checkbox",
+      "default": true
+    },
+    "includeExecutiveSummary": {
+      "title": "Include Executive Summary",
+      "type": "boolean",
+      "description": "Add an executive summary at the beginning",
+      "editor": "checkbox",
+      "default": true
+    },
+    "includeReferences": {
+      "title": "Include References",
+      "type": "boolean",
+      "description": "Add references and suggested sources",
+      "editor": "checkbox",
+      "default": true
+    },
+    "includeCallToAction": {
+      "title": "Include Call-to-Action",
+      "type": "boolean",
+      "description": "Add a call-to-action at the end",
+      "editor": "checkbox",
+      "default": true
+    },
+    "ctaText": {
+      "title": "Call-to-Action Text",
+      "type": "string",
+      "description": "Custom CTA text (optional)",
+      "editor": "textarea"
+    },
+    "industryContext": {
+      "title": "Industry/Context",
+      "type": "string",
+      "description": "Specific industry or context for the article",
+      "editor": "textfield"
+    },
+    "writingModel": {
+      "title": "AI Writing Model",
+      "type": "string",
+      "description": "AI model for article writing",
+      "editor": "select",
+      "enum": ["anthropic/claude-3.5-sonnet", "openai/gpt-4o", "anthropic/claude-3-opus"],
+      "default": "anthropic/claude-3.5-sonnet",
+      "enumTitles": ["Claude 3.5 Sonnet (Best)", "GPT-4o (Fast)", "Claude 3 Opus (Premium)"]
+    },
+    "imageModel": {
+      "title": "AI Image Model",
+      "type": "string",
+      "description": "AI model for image generation",
+      "editor": "select",
+      "enum": ["black-forest-labs/flux-1.1-pro", "openai/dall-e-3", "black-forest-labs/flux-schnell"],
+      "default": "black-forest-labs/flux-schnell",
+      "enumTitles": ["FLUX 1.1 Pro (Best)", "DALL-E 3 (Premium)", "FLUX Schnell (Fast & Free)"]
+    },
+    "openrouterApiKey": {
+      "title": "OpenRouter API Key",
+      "type": "string",
+      "description": "Your OpenRouter API key from https://openrouter.ai/keys",
+      "editor": "textfield",
+      "isSecret": true
+    }
+  },
+  "required": ["topic", "keywords", "openrouterApiKey"]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "professional-blog-writer-actor",
+  "version": "1.0.0",
+  "description": "Professional blog writer with AI-generated images, executive summaries, table of contents, and SEO optimization",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "blog",
+    "content",
+    "writing",
+    "AI",
+    "SEO",
+    "images",
+    "professional",
+    "apify",
+    "openrouter"
+  ],
+  "author": "Your Name",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apify": "^3.4.2",
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

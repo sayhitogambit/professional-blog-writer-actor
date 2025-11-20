@@ -1,0 +1,187 @@
+{
+  "title": "Professional Blog Article Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "title": {
+      "title": "Article Title",
+      "type": "string",
+      "description": "Generated article title",
+      "editor": "textfield"
+    },
+    "subtitle": {
+      "title": "Subtitle",
+      "type": "string",
+      "description": "Article subtitle or tagline",
+      "editor": "textfield"
+    },
+    "executiveSummary": {
+      "title": "Executive Summary",
+      "type": "string",
+      "description": "Brief executive summary of the article",
+      "editor": "textarea"
+    },
+    "tableOfContents": {
+      "title": "Table of Contents",
+      "type": "array",
+      "description": "Article sections for TOC",
+      "editor": "json",
+      "items": {
+        "type": "object",
+        "properties": {
+          "heading": {"type": "string"},
+          "anchor": {"type": "string"}
+        }
+      }
+    },
+    "contentHTML": {
+      "title": "Article Content (HTML)",
+      "type": "string",
+      "description": "Full article content in HTML format",
+      "editor": "textarea"
+    },
+    "contentMarkdown": {
+      "title": "Article Content (Markdown)",
+      "type": "string",
+      "description": "Full article content in Markdown format",
+      "editor": "textarea"
+    },
+    "metaDescription": {
+      "title": "Meta Description",
+      "type": "string",
+      "description": "SEO meta description",
+      "editor": "textarea"
+    },
+    "metaKeywords": {
+      "title": "Meta Keywords",
+      "type": "array",
+      "description": "SEO keywords used",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "imageUrls": {
+      "title": "Generated Images",
+      "type": "array",
+      "description": "URLs of AI-generated images",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "imagePrompts": {
+      "title": "Image Prompts",
+      "type": "array",
+      "description": "Prompts used to generate images",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "title": "References",
+      "type": "array",
+      "description": "Suggested references and sources",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "callToAction": {
+      "title": "Call to Action",
+      "type": "string",
+      "description": "CTA text and HTML",
+      "editor": "textarea"
+    },
+    "wordCount": {
+      "title": "Word Count",
+      "type": "integer",
+      "description": "Actual word count of the article",
+      "editor": "number"
+    },
+    "readingTime": {
+      "title": "Reading Time",
+      "type": "integer",
+      "description": "Estimated reading time in minutes",
+      "editor": "number"
+    },
+    "seoScore": {
+      "title": "SEO Score",
+      "type": "integer",
+      "description": "SEO quality score (0-100)",
+      "editor": "number"
+    },
+    "writingModel": {
+      "title": "Writing Model Used",
+      "type": "string",
+      "description": "AI model used for writing",
+      "editor": "textfield"
+    },
+    "imageModel": {
+      "title": "Image Model Used",
+      "type": "string",
+      "description": "AI model used for images",
+      "editor": "textfield"
+    },
+    "usage": {
+      "title": "Token Usage",
+      "type": "object",
+      "description": "API usage statistics",
+      "editor": "json",
+      "properties": {
+        "writing_tokens": {"type": "integer"},
+        "image_generations": {"type": "integer"}
+      }
+    },
+    "cost": {
+      "title": "Total Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "writingCost": {
+      "title": "Writing Cost",
+      "type": "number",
+      "description": "Text generation cost in USD",
+      "editor": "number"
+    },
+    "imageCost": {
+      "title": "Image Cost",
+      "type": "number",
+      "description": "Image generation cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "profit": {
+      "title": "Profit",
+      "type": "number",
+      "description": "Profit from this generation in USD",
+      "editor": "number"
+    },
+    "profitMargin": {
+      "title": "Profit Margin",
+      "type": "number",
+      "description": "Profit margin percentage",
+      "editor": "number"
+    },
+    "duration": {
+      "title": "Generation Duration",
+      "type": "number",
+      "description": "Total generation time in seconds",
+      "editor": "number"
+    },
+    "generatedAt": {
+      "title": "Generated At",
+      "type": "string",
+      "description": "ISO timestamp of generation",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}
